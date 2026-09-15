@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Quiz Whiz</title>
+        <style>#div1{
+background-image:url(https://t4.ftcdn.net/jpg/03/10/16/27/360_F_310162798_6hWbaSFgDtWp4AhhaKPlTgAZUDL1c4UY.jpg);
+background-repeat:no-repeat;
+background-size:cover;
+height: 400px;
+padding-top:30px;
+}
+table{
+    width:100%;
+    text-align:center;
+    font-size:20px;
+}
+a{
+    color:yellow;
+    font-weight: bold;
+    text-decoration:none;
+}
+h1{
+    padding:100px;
+    text-align:center;
+    color:white;
+    opacity:0.5;
+}
+#welcome{
+    text-align:center;
+    color:darkgreen;
+    font-size:20px;
+    font-weight:bold;
+    margin-top:15px;
+}
+body{
+    margin:0;
+    animation:Benjamin 6s infinite;
+}
+@keyframes Benjamin{
+    0%{background-color:lightseagreen;}
+    25%{background-color:lightgoldenrodyellow;}
+     50%{background-color:lightslategray;}
+    75%{background-color:lightcoral;}
+     100%{background-color:lightgreen;}
+}
+h2{
+    text-align:center;
+    margin-top:70px;
+    animation:Benjamin1 2s infinite alternate;
+}
+@keyframes Benjamin1{
+    from{font-size:20px;color:green;}
+    to{font-size:25px;color:blue;}
+}
+.quizSection{
+    display:flex;
+    justify-content:space-between;
+    gap:25px;
+    padding:30px;
+    flex-wrap:wrap;
+    background-color:limegreen
+}
+.card{
+    background:transparent;
+    width:32%;
+    text-align:center;
+    font-size:18px;
+}
+.card img{
+    width:90%;
+    height:auto;
+    border-radius:6px;
+}
+.card button{
+    padding:10px 15px;
+    cursor:pointer;
+    margin-top:10px;
+
+}
+.quizBox{
+    text-align:center;
+    font-size:20px;
+    padding:20px;
+    margin:30px;
+    border-radius:8px;
+    background-color: aquamarine;
+    display:none;
+}
+</style>
+    </head>
+    <body onload="register()">
+<div id="div1">
+    <table>
+<tr>
+    <th><a href="#">Home</a></th>
+    <th><a href="#mathQuiz">Math</a></th>
+     <th><a href="#">Science</a></th>
+      <th><a href="#">Geography</a></th>
+    </tr>
+    </table>
+    <h1>Codeyoung</h1>
+    </div>
+    <h2>Your name is registered below</h2>
+    <p id="welcome"></p>
+
+    <!-- Part 2 starts from here -->
+<div class="quizSection">
+<div class="card">
+    <img alt="Image" src="https://png.pngtree.com/background/20250306/original/pngtree-back-to-school-chalkboard-with-supplies-and-math-equations-for-classroom-picture-image_16297416.jpg">
+    <p>A fun interactive topic where you get to interact with numbers and equations and use your skills to solve problems!</p>
+    <button onclick="showMath()">Start Math Quiz</button>
+</div>
+
+<div class="card">
+    <img alt="Image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcI7taPSfICmgUExZgf7DxG_wrhlvEzoeovg_ByVQHog&s">
+    <p>A really cool topic where you can learn about things as small as a atom to the entire universe!</p>
+    <button onclick="showScience()">Start Science Quiz</button>
+</div>
+
+<div class="card">
+    <img alt="Image" src="https://thumbs.dreamstime.com/b/magnetic-old-compass-world-map-travel-geography-navigation-tourism-exploration-concept-background-macro-photo-very-shallow-169956229.jpg">
+    <p>A really cool topic where you can learn about different places and what makes them unique!</p>
+    <button onclick="showGeography()">Start Geography Quiz</button>
+</div>
+    </div>
+
+<!-- Part 3 starts from here< -->
+<div class="quizBox" id="mathQuiz">
+    <h3>Math Quiz</h3>
+    <p>1. A recipe calls for 3 cups of flour to 2 cups of sugar. If you use 9 cups of flour, how many cups of sugar do you need?</p>
+    <button onclick="wrong()">4</button>
+    <button onclick="right()">6</button>
+    <button onclick="wrong()">8</button>
+    <button onclick="wrong()">9</button>
+
+    <p>2. What is the value of  (3/4) divided by (2/3)?</p>
+    <button onclick="wrong()">1/2</button>
+    <button onclick="wrong()">8/9</button>
+    <button onclick="right()">9/8</button>
+    <button onclick="wrong()">6/12</button>
+
+    <p>3. Evaluate the expression: (-15 + 8 - (-4))</p>
+    <button onclick="right()">-3</button>
+    <button onclick="wrong()">-11</button>
+    <button onclick="wrong()">-27</button>
+    <button onclick="wrong()">3</button>
+
+<p>4. What is the sum of 3/4 and 2/3?</p>
+<button onclick="wrong()">5/7</button>
+<button onclick="wrong()">5/12</button>
+<button onclick="right()">1 5/12</button>
+<button onclick="wrong()">1 1/6</button>
+
+<p>5. Solve for x: 3x + 5 = 20?</p>
+<button onclick="wrong()">3</button>
+<button onclick="right()">5</button>
+<button onclick="wrong()">7</button>
+<button onclick="wrong()">15</button>
+    </div>
+
+<!-- Science quiz starts -->
+<div class="quizBox" id="scienceQuiz">
+     <h3>Science Quiz</h3>
+    <p>1. If a block of wood has a mass of 30 grams and a volume of 60 cubic centimeters what is its density, and will it float in pure water?</p>
+<button onclick="wrong()">2 g/cm cubed sink </button>
+<button onclick="right()">0.5g/cm cubed float</button>
+<button onclick="wrong()">2 g/cm cubed float</button>
+<button onclick="wrong()">0.5 g/cm cubed sink</button>
+
+<p>2. Which region of the Hertzsprung-Russell (H-R) diagram contains stars that are relatively cool in surface temperature (appearing red or orange) yet have high luminosity due to their massive physical size?</p>
+<button onclick="wrong()">White dwarfs</button>
+<button onclick="wrong()">Main sequence</button>
+<button onclick="right()">Supergiants and Giants</button>
+<button onclick="wrong()">Protostars</button>
+
+<p>3. The San Andreas Fault in California is a classic example of which type of plate boundary where lithospheric plates slide past one another horizontally without creating or destroying crust?</p>
+<button onclick="right()">Transform</button>
+<button onclick="wrong()">Divergent</button>
+<button onclick="wrong()">Convergent</button>
+<button onclick="wrong()">Slip-strike</button>
+
+<p>4. Due to the Coriolis effect in the Northern Hemisphere, a free-moving wind or ocean current traveling from the equator toward the North Pole will be deflected in which direction?</p>
+<button onclick="wrong()">To the west</button>
+<button onclick="wrong()">Straight north/ no bend</button>
+<button onclick="wrong()">To the south</button>
+<button onclick="right()">To the right/east</button>
+
+<p>5. Why is the number of trophic levels in an ecological food chain or energy pyramid typically limited to four or five?</p>
+<button onclick="wrong()">Higher level predators often migrate out</button>
+<button onclick="right()">There is not enough energy to transfer between levels</button>
+<button onclick="wrong()">Tertiary consumer produce toxins to stop preadators</button>
+<button onclick="wrong()">Apex-predators need more freshwater than their prey</button>
+    </div>
+
+    <!-- Geography Quiz starts -->
+    <div class="quizBox" id="geographyQuiz">
+         <h3>Geography Quiz</h3>
+        <p>1. Which deep-sea feature, formed by the subduction of the Pacific Plate beneath the Philippine Sea Plate, marks the deepest known point on Earth?</p>
+<button onclick="wrong()">The Puerto Rico Trench</button>
+<button onclick="wrong()"> The Tonga Trench</button>
+<button onclick="wrong()">The Java Trench</button>
+<button onclick="right()">The Mariana Trench </button>
+
+<p>2. What is the name of the transitional semi-arid geographic zone in Africa that separates the hyper-arid Sahara Desert to the north from the tropical savannas to the south?</p>
+<button onclick="wrong()">The Maghreb</button>
+<button onclick="right()">The Sahel</button>
+<button onclick="wrong()"> The Sudd</button>
+<button onclick="wrong()">The Kalahari</button>
+
+<p>3. On a standard Mercator projection map, which of the following spatial distortions occurs most severely?</p>
+<button onclick="wrong()">True compass bearings (rhumb lines) bend into complex curves across oceans.</button>
+<button onclick="wrong()"> Shapes of small, localized landmasses are warped and twisted near the equator.</button>
+<button onclick="wrong()">Linear scale is mathematically preserved along meridians but compressed along parallels.</button>
+<button onclick="right()">Linear scale is mathematically preserved along meridians but compressed along parallels.</button>
+
+<p>4. The Danube River, Europe's second-longest river, flows through or borders 10 different countries before emptying into which body of water?</p>
+<button onclick="wrong()">The Caspian Sea</button>
+<button onclick="wrong()"> The Adriatic Sea</button>
+<button onclick="right()">The Black Sea</button>
+<button onclick="wrong()">The Baltic Sea</button>
+
+<p>5. Which massive mountain range forms the traditional, conventional geographic boundary that divides the continents of Europe and Asia?</p>
+<button onclick="wrong()">The Caucasus Mountains</button>
+<button onclick="right()"> The Ural Mountains</button>
+<button onclick="wrong()">The Carpathian Mountains</button>
+<button onclick="wrong()"> The Altai Mountains</button>
+        </div>
+    <script>
+        function register(){
+            let name = prompt("Register your name for the quiz!");
+
+            if (name === null || name.trim() === "") {
+                name = "Guest";
+            }
+            document.getElementById("welcome").innerHTML = "Hello " + name + ", Welcome to techlearner. Your name is now registered";
+
+            document.getElementById("div1").style.backgroundImage = "url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcPsCb3SeNgFWmPC-R8CUNwaIEjaZnNdLRg-F7bK3vLWroZtkgRJHLuJ-z&s=10)";
+        }
+
+        function right(){
+            alert("Correct answer!");
+        }
+
+        function wrong(){
+            alert("Wrong answer, please try again!")
+        }
+         
+         function showMath(){
+            document.getElementById("mathQuiz").style.display = "none";
+             document.getElementById("scienceQuiz").style.display = "none";
+              document.getElementById("geographyQuiz").style.display = "none";
+
+               document.getElementById("mathQuiz").style.display = "block";
+         }
+          
+          function showScience(){
+             document.getElementById("mathQuiz").style.display = "none";
+             document.getElementById("scienceQuiz").style.display = "none";
+              document.getElementById("geographyQuiz").style.display = "none";
+
+               document.getElementById("scienceQuiz").style.display = "block";
+          }
+
+        function showGeography(){
+ document.getElementById("mathQuiz").style.display = "none";
+             document.getElementById("scienceQuiz").style.display = "none";
+              document.getElementById("geographyQuiz").style.display = "none";
+
+               document.getElementById("geographyQuiz").style.display = "block";
+        }
+        </script>
+        </body>
+        </html>
